@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Pray Time Islamic</string>
+    <string name="waktu_sholat">Waktu Sholat</string>
+    <string name="doa_doa">Doa - doa</string>
+    <string name="info_aplikasi">Info Aplikasi</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

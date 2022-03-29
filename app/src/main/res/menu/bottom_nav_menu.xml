@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_pray"
+        android:icon="@drawable/ic_time"
+        android:title="@string/waktu_sholat" />
+
+    <item
+        android:id="@+id/nav_doa"
+        android:icon="@drawable/ic_book"
+        android:title="@string/doa_doa" />
+
+    <item
+        android:id="@+id/nav_info"
+        android:icon="@drawable/ic_info"
+        android:title="@string/info_aplikasi" />
+
+</menu>

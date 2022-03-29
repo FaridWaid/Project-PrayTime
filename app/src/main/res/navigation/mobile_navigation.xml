@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_pray">
+
+    <fragment
+        android:id="@+id/nav_pray"
+        android:name="com.faridwaid.praytimeislamic.PrayFragment"
+        android:label="Waktu Sholat"
+        tools:layout="@layout/fragment_pray" />
+    <fragment
+        android:id="@+id/nav_doa"
+        android:name="com.faridwaid.praytimeislamic.DoaFragment"
+        android:label="Doa - doa"
+        tools:layout="@layout/fragment_doa" />
+    <fragment
+        android:id="@+id/nav_info"
+        android:name="com.faridwaid.praytimeislamic.InfoFragment"
+        android:label="Info Aplikasi"
+        tools:layout="@layout/fragment_info" >
+    </fragment>
+
+</navigation>
