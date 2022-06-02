@@ -3,10 +3,12 @@
     <color name="primary">#BAFFB4</color>
     <color name="background">#252C4B</color>
     <color name="card_background">#FFFFFF</color>
+    <color name="color_text">#FFF</color>
     <color name="primary_text">#565B65</color>
     <color name="secondary_text">#9B9A9D</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000</color>
+    <color name="accent_color">#252C4B</color>
     <color name="dark_Red">#FFCC0000</color>
     <color name="bottom_bar_indicator_color">#BAFFB4</color>
     <color name="bottom_bar_icon_tint">#CFD0E2</color>
