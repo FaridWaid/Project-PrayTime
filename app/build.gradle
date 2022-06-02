@@ -50,4 +50,14 @@ dependencies {
 
     // Smooth Bottom Bar
     implementation 'com.github.ibrahimsn98:SmoothBottomBar:1.7.8'
+
+    // Rounded ImageView
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    //Library api
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.2'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
 }

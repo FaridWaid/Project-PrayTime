@@ -3,10 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Dev/Android_Learning/PrayApp/app/src/main/res/layout/activity_detail_doa.xml" value="0.25" />
         <entry key="..\:/Dev/Android_Learning/PrayApp/app/src/main/res/layout/activity_main.xml" value="0.1793478260869565" />
         <entry key="..\:/Dev/Android_Learning/PrayApp/app/src/main/res/layout/fragment_doa.xml" value="0.1793478260869565" />
         <entry key="..\:/Dev/Android_Learning/PrayApp/app/src/main/res/layout/fragment_info.xml" value="0.1793478260869565" />
-        <entry key="..\:/Dev/Android_Learning/PrayApp/app/src/main/res/layout/fragment_pray.xml" value="0.1793478260869565" />
+        <entry key="..\:/Dev/Android_Learning/PrayApp/app/src/main/res/layout/fragment_pray.xml" value="0.176" />
+        <entry key="..\:/Dev/Android_Learning/PrayApp/app/src/main/res/layout/item_list_doa.xml" value="0.25" />
         <entry key="..\:/Dev/Android_Learning/PrayApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
       </map>
     </option>
