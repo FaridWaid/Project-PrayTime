@@ -5,8 +5,10 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
 
-    private const val BASE_URL = "https://api.pray.zone/v2/times/"
+    //mendefinisikan BASE_URL
+    private const val BASE_URL = "https://muslimsalat.com/"
 
+    //menggunakan library retrofit untuk digunakan pada API
     val instance: Api by lazy {
         val retrofit = Retrofit.Builder()
             .baseUrl(BASE_URL)

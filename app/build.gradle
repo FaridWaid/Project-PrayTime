@@ -60,4 +60,7 @@ dependencies {
     implementation 'com.squareup.okhttp3:logging-interceptor:4.9.2'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'androidx.cardview:cardview:1.0.0'
+
+    //Date time
+    implementation 'com.wdullaer:materialdatetimepicker:4.2.3'
 }

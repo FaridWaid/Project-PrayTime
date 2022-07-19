@@ -1,14 +1,14 @@
 package com.faridwaid.praytimeislamic
 
 import android.os.Bundle
+import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.faridwaid.praytimeislamic.activity.DetailDoaActivity
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.faridwaid.praytimeislamic.adapter.DoaAdapter
 import com.faridwaid.praytimeislamic.api.RetrofitClient
 import com.faridwaid.praytimeislamic.model.DoaResponse
@@ -18,7 +18,8 @@ import retrofit2.Response
 
 class DoaFragment : Fragment() {
 
-    private lateinit var textName: TextView
+    //mendefinisikan variabel
+    private lateinit var refreshData: SwipeRefreshLayout
     //list dari doa - doa
     private var list = ArrayList<DoaResponse>()
 
@@ -32,6 +33,17 @@ class DoaFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        //menginisialisasi variable refreshData
+        refreshData = view.findViewById(R.id.refreshData)
+
+        //jika variable refreshData di refresh
+        refreshData.setOnRefreshListener {
+            // Loading selama beberapa waktu, ketika sudah selesa nilai refreshFrament menjadi false
+            Handler().postDelayed(Runnable {
+                refreshData.isRefreshing = false
+            }, 2000)
+        }
 
         //menampilkan list doa
         var rvPost: RecyclerView = view.findViewById(R.id.rv_doa)
@@ -52,15 +64,6 @@ class DoaFragment : Fragment() {
 
             }
         })
-//        showListDoa()
-
     }
-
-    // Membuat fungsi "animationToTop" yang berisi animasi ketika pinday activity
-    // fungsi ini digunakan pada adapter
-//    fun animationToTop() {
-//        requireActivity().overridePendingTransition(R.anim.slide_from_bottom, R.anim.slide_to_top)
-//    }
-
 
 }

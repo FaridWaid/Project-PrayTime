@@ -11,17 +11,19 @@ class DetailDoaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_doa)
 
+        //mendefinisikan variable textView
         val tvSetTitle: TextView = findViewById(R.id.titleDoa)
         val tvSetAyat: TextView = findViewById(R.id.ayat_doa)
         val tvSetLatin: TextView = findViewById(R.id.latin_doa)
         val tvSetArti: TextView = findViewById(R.id.arti_doa)
 
-        val tIdDoa = intent.getStringExtra(EXTRA_ID)
+        //mendapatkan value dari intent
         val tJudulDoa = intent.getStringExtra(EXTRA_DOA)
         val tAyatDoa = intent.getStringExtra(EXTRA_AYAT)
         val tLatinDoa = intent.getStringExtra(EXTRA_LATIN)
         val tArtiDoa = intent.getStringExtra(EXTRA_ARTINYA)
 
+        //memasukkan value ke dalam textView
         tvSetTitle.text = tJudulDoa
         tvSetAyat.text = tAyatDoa
         tvSetLatin.text = tLatinDoa
@@ -38,6 +40,7 @@ class DetailDoaActivity : AppCompatActivity() {
 
     }
 
+    //membuat companion object
     companion object {
         const val EXTRA_ID = "extra_id"
         const val EXTRA_DOA = "extra_doa"

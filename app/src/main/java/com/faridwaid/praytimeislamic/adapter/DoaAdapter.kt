@@ -6,13 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.faridwaid.praytimeislamic.DoaFragment
-import com.faridwaid.praytimeislamic.MainActivity
 import com.faridwaid.praytimeislamic.R
 import com.faridwaid.praytimeislamic.activity.DetailDoaActivity
 import com.faridwaid.praytimeislamic.model.DoaResponse
 
 class DoaAdapter(private val list: ArrayList<DoaResponse>): RecyclerView.Adapter<DoaAdapter.PostViewHolder>() {
+
+    // Membuat class PostViewHolder yang digunakan untuk set view yang akan ditampilkan,
     inner class PostViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val tvResponse: TextView = itemView.findViewById(R.id.titleDoa)
         fun bind(doa: DoaResponse){
@@ -23,11 +23,14 @@ class DoaAdapter(private val list: ArrayList<DoaResponse>): RecyclerView.Adapter
         }
     }
 
+    // Menentukan layout yang akan ditampilkan dalam recyclerview
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_list_doa, parent, false)
         return PostViewHolder(view)
     }
 
+    // Memasukkan data ke dalam list recyclerview seasui dengan posisi/position,
+    // Kemudian jika salah satu item di klik, akan pindah ke detail dari item yang di klik
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
         holder.bind(list[position])
 
@@ -47,6 +50,7 @@ class DoaAdapter(private val list: ArrayList<DoaResponse>): RecyclerView.Adapter
 
     }
 
+    // Mendapatkan jumlah data dari list
     override fun getItemCount(): Int = list.size
 
 }

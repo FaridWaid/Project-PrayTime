@@ -4,20 +4,22 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 
 class InfoFragment : Fragment() {
 
+    //mendefinisikan variabel
     private lateinit var infoApp: Button
     private lateinit var apiPrayTime: Button
     private lateinit var apiDoa: Button
+    private lateinit var refreshData: SwipeRefreshLayout
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,10 +32,21 @@ class InfoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //menginisialisasi variable refreshData
+        refreshData = view.findViewById(R.id.refreshData)
+
+        //jika variable refreshData di refresh
+        refreshData.setOnRefreshListener {
+            // Loading selama beberapa waktu, ketika sudah selesa nilai refreshFrament menjadi false
+            Handler().postDelayed(Runnable {
+                refreshData.isRefreshing = false
+            }, 2000)
+        }
+
         //set untuk link ke api pray time
         apiPrayTime = view.findViewById(R.id.apiPrayTime)
         apiPrayTime.setOnClickListener {
-            val uri: Uri = Uri.parse("https://waktusholat.org/api/docs/")
+            val uri: Uri = Uri.parse("https://muslimsalat.com/")
             startActivity(Intent(Intent.ACTION_VIEW,uri))
         }
 
@@ -44,6 +57,7 @@ class InfoFragment : Fragment() {
             startActivity(Intent(Intent.ACTION_VIEW,uri))
         }
 
+        //set untuk memberikan informasi dengan alert dialog ketika variable infoApp di klik
         infoApp = view.findViewById(R.id.infoApp)
         infoApp.setOnClickListener {
             val alertDialog = AlertDialog.Builder(requireContext(), R.style.MyDialogTheme)
@@ -59,4 +73,5 @@ class InfoFragment : Fragment() {
         }
 
     }
+
 }
